@@ -67,5 +67,7 @@ fn main() {
             println!("【ℹ️情報】Nレンジでブレーキ作動中。安全です。");
         }
         println!();
+        // パケットを処理したあと、1秒（1000ミリ秒）待ってから次の受信に進む
+        std::thread::sleep(std::time::Duration::from_millis(1000));
     }
 }
